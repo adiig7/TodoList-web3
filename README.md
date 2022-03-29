@@ -15,4 +15,5 @@ https://user-images.githubusercontent.com/54351909/160697009-410cf954-d2a6-4bcc-
 ## What's next?
 
 - Will be working on making the UI better.
+- Will be adding more features...
 
