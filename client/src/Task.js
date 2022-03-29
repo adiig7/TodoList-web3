@@ -4,13 +4,13 @@ import './Task.css';
 
 const Task=({taskText, onClick})=>{
     return (
-        <div>
+        <div style={{display:"flex",justifyContent:"center"}}>
         <List className="todo__list"> 
-            <ListItem>
+            <ListItem  >
                 <ListItemAvatar />
-                    <ListItemText primary={taskText} />
+                    <ListItemText style={{ color: "white"}} primary={taskText} />
             </ListItem>
-            <DeleteIcon fontSize="large" style={{opacity:0.7}} onClick={onClick}/>
+                <DeleteIcon fontSize="large" style={{ opacity: 0.7 ,color:"red",marginRight:"10px",cursor:"pointer"}} onClick={onClick}/>
             </List>
         </div>    
     )
