@@ -6,6 +6,7 @@ import './App.css';
 import { TaskContractAddress } from './config.js';
 import { ethers } from 'ethers';
 import TaskAbi from './utils/TaskContract.json';
+import background from "./utils/back.jpeg";
 
 
 const App = () => {
@@ -122,7 +123,13 @@ const App = () => {
   }, []);
 
   return (
-    <div>
+    <div style = {{
+      backgroundImage: `url(${background})`,
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: 'cover',
+      height: 'fit-content',
+      minHeight:"100vh"
+      }} >
       {currentAccount === '' ? (
         <button
           className='text-2xl font-bold py-3 px-12 bg-[#f1c232] rounded-lg mb-10 hover:scale-105 transition duration-500 ease-in-out'
@@ -132,11 +139,13 @@ const App = () => {
         </button>
       ) : correctNetwork ? (
         <div className="App">
-          <h2> Task Management App</h2>
+          <h1 style={{color:"white", padding:"20px 0px"}}> TodoList Dapp</h1>
           <form>
-            <TextField id="outlined-basic" label="Make Todo" variant="outlined" style={{ margin: "0px 5px" }} size="small" value={input}
-              onChange={e => setInput(e.target.value)} />
-            <Button variant="contained" color="primary" onClick={addTask}  >Add Task</Button>
+              <TextField sx={{ input: { color: 'yellow' } }}id="outlined-basic" label="Make Todo" variant="outlined" style={{ margin: "0px 5px 15px 5px" ,width:"250px",color:"white"}} size="sm" value={input}
+                onChange={e => setInput(e.target.value)} />
+              <div>
+                <Button variant="contained" className={ "button1"} color='success' onClick={addTask} style={{marginBottom:"20px"}} >Add Task</Button>
+              </div>
           </form>
           <ul>
             {tasks.map(item =>
