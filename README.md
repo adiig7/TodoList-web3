@@ -1,5 +1,11 @@
 # TodoList-web3 
-A simple application built on web3 using Solidity, Hardhat, Ethers.js with frontend written in React.js. 
+An application built to create Todos and make your life easier by remembering things. 
+
+## Tech Stack used
+- Solidity
+- Hardhat
+- Ethers.js
+-  React.js
 
 ## What users can do? 
 - Users can add a Todo.
